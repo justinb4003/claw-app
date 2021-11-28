@@ -14,7 +14,7 @@ export class AppComponent {
   public clawChange(event: any): void {
     console.log('change', event.value);
     const pct = Math.floor(event.value);
-    this.http.get<any>('http://192.168.1.41:80/claw/' + pct).subscribe(data => {
+    this.http.get<any>('https://home.justinbuist.com/claw/setpos/' + pct).subscribe(data => {
       console.log(data);
     });
   }
